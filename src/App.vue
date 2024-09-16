@@ -1,9 +1,10 @@
 <template>
   <div>
-    <NavBar/>
+    <NavBar :logo="logo_src" :alt="app_name"/>
     <router-view/>
     <Footer/>
   </div>
+ 
 </template>
 
 <script>
@@ -15,10 +16,36 @@ export default{
   components: {
     NavBar,
     Footer
+  },
+  data(){
+    return{
+      logo_src: "/img/burgerLogo.jpg",
+      app_name: "Faça seu hamburguer"
+    }
   }
 }
 </script>
 
 <style>
+
+*{
+  font-family: Helvetica;
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
+}
+
+.main-container{
+  margin:50px;
+  min-height:350px;
+
+}
+
+h1{
+  text-align: center;
+  font-size: 42px;
+  margin-bottom:30px;
+  color:#222;
+}
 
 </style>
