@@ -1,6 +1,7 @@
 <template>
     <div id="burger-table">
         <div>
+          <Message :msg="msg" v-show="msg"/>
             <div id="burger-table-heading">
                 <div class="order-id">#</div>
                 <div>Cliente:</div>
@@ -24,7 +25,7 @@
                     </ul>
                 </div>
                 <div>
-                    <select name="status" class="status">
+                    <select name="status" class="status" @change="updateBurger($event, burger.id)">
                         <option value="">Selecione</option>
                         <option  v-for="statu in status" :key="statu.id" :value="statu.tipo" :selected="burger.status == statu.tipo">
                           {{ statu.tipo }}
@@ -37,16 +38,24 @@
     </div>
 </template>
 <script>
+import Message from './Message.vue';
+
     export default{
         name: 'Dashboard',
+        components:{
+          Message,
+        },
         data(){
             return {
                 burgers: null,
                 burger_id: null,
-                status: []
+                status: [],
+                msg: null,
             }
         },
         methods:{
+
+            //Requsição dos pedidos
             async getPedidos(){
               const req = await fetch("http://localhost:3000/burgers");
 
@@ -58,6 +67,8 @@
               this.getStatus();
 
             },
+
+            //Requsição dos status dos pedidos
             async getStatus(){
               const req = await fetch("http://localhost:3000/status");
 
@@ -67,6 +78,8 @@
               });
 
             },
+
+            //Delete dos pedidos
             async deleteBurger(id){
               console.log(id)
               
@@ -76,10 +89,41 @@
               })
               const res = await req.json()
 
+              this.msg = `Pedido removido com sucesso!`
+
+              //Limpar msg
+              setTimeout(()=> {
+                this.msg = ""
+              }, 5000)
+
               //Mostrara o resultado novamente sem o pedido que foi removido
               this.getPedidos();
 
+            },
+
+            //Requisição de atualização dos status do pedido
+            async updateBurger(event, id){
+              const option = event.target.value;
+
+              const dataJson = JSON.stringify({ status: option })
+
+              const req = await fetch(`http://localhost:3000/burgers/${id}`,{
+                method: "PATCH",// O patch e um tipo de update que serve para atualizar uma coisa especifica no caso aqui é o status
+                headres: {"Content-Type": "application/json"},
+                body: dataJson
+              });
+
+              const res = await req.json()
+
+              this.msg = `O pedido Nº ${res.id} foi atualizado para o status de ${res.status}`
+
+              setTimeout(() => {
+                this.msg = ""
+              }, 5000)
+
+              console.log(res);
             }
+
         },
         mounted(){
             this.getPedidos()

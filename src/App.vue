@@ -19,7 +19,7 @@ export default{
   },
   data(){
     return{
-      logo_src: "/img/burgerLogo.jpg",
+      logo_src: "/img/logoBurger.png",
       app_name: "Faça seu hamburguer"
     }
   }

@@ -95,16 +95,21 @@
   ],
   "burgers": [
     {
-      "id": "1cbd",
-      "name": "Thiago Alves",
+      "id": "65aa",
+      "name": "Paulo",
       "pao": "3 Queijos",
-      "carne": "Alcatra",
+      "carne": "Picanha",
       "opcionais": [
         "Bacon",
-        "Tomate",
-        "Cebola roxa"
+        "Cheddar",
+        "Salame",
+        "Mostarda",
+        "Pimenta",
+        "Cebola roxa",
+        "Alface",
+        "Tomate"
       ],
-      "status": "Solicitado"
+      "status": "Em produção"
     }
   ]
 }
