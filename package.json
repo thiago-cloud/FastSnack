@@ -1,5 +1,5 @@
 {
-  "name": "burguearia",
+  "name": "FastSnake",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "burguearia": "file:",
+    "burguer": "file:",
     "core-js": "^3.8.3",
+    "FastSnake": "file:",
     "json-server": "^1.0.0-beta.2",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"

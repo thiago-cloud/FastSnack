@@ -1,3 +1,6 @@
+backup do componente navBar.vue
+
+
 <template>
     <div id="nav">
         <router-link to="/" id="logo_url">

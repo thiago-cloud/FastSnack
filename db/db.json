@@ -47,35 +47,19 @@
       },
       {
         "id": 3,
-        "tipo": "Salame"
-      },
-      {
-        "id": 4,
-        "tipo": "Tomate"
-      },
-      {
-        "id": 5,
         "tipo": "Cebola roxa"
       },
       {
-        "id": 6,
+        "id": 4,
         "tipo": "Pepino"
       },
       {
-        "id": 7,
+        "id": 5,
         "tipo": "Alface"
       },
       {
-        "id": 8,
-        "tipo": "Pimenta"
-      },
-      {
-        "id": 9,
-        "tipo": "Mostarda"
-      },
-      {
-        "id": 9,
-        "tipo": "Geleia de Bacon"
+        "id": 6,
+        "tipo": "Geleia"
       }
     ]
   },
@@ -95,21 +79,48 @@
   ],
   "burgers": [
     {
-      "id": "65aa",
-      "name": "Paulo",
-      "pao": "3 Queijos",
+      "id": "9a99",
+      "name": "Thiago Alves",
+      "pao": "Italiano Branco",
+      "carne": "Maminha",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "e2fa",
+      "name": "irineu",
+      "pao": "Parmesão e Orégano",
       "carne": "Picanha",
       "opcionais": [
-        "Bacon",
-        "Cheddar",
-        "Salame",
-        "Mostarda",
-        "Pimenta",
-        "Cebola roxa",
-        "Alface",
-        "Tomate"
+        "Pimenta"
       ],
-      "status": "Em produção"
+      "status": "Solicitado"
+    },
+    {
+      "id": "53fb",
+      "name": "irineu",
+      "pao": "Italiano Branco",
+      "carne": "Veggie burger",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "1685",
+      "pao": null,
+      "carne": null,
+      "opcionais": [],
+      "status": "Solicitado"
+    },
+    {
+      "id": "db81",
+      "pao": "",
+      "carne": "",
+      "opcionais": [],
+      "status": "Solicitado"
     }
   ]
 }
