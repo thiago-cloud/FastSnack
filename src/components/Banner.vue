@@ -56,6 +56,7 @@
   
   @media (max-width: 480px) {
     #main-banner {
+      margin-top: 10vh;
       height: 200px;
     }
   
