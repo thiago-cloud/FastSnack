@@ -1,4 +1,4 @@
-# Aplicação appBurger
+# Aplicação FastSnack
 
 Status: Desenvolvedor ⚠️
 
