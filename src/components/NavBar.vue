@@ -79,7 +79,7 @@
   }
   
   #logo {
-    width:8vw;
+    width:70px;
   }
   
   #nav a {

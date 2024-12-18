@@ -49,7 +49,7 @@ h1 {
 @media (max-width: 480px) {
   .main-container {
     padding: 10px;
-    margin-top:13vh;
+   
   }
 
   h1 {
